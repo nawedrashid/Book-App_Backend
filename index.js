@@ -64,10 +64,10 @@ app.post('/user/:userId/savesearch',async(req,res) => {
     console.log(error)
   }
 })
-  
+const port = process.env.PORT || 5000;
 
-app.listen("5000", () => {
-  console.log("Server is running!");
+app.listen(port, () => {
+  console.log("Server is running on ",+port);
 });
 app.get('/', (req,res)=>{
   res.send('Hello')
